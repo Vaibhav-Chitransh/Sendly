@@ -1,7 +1,8 @@
 import User from "../models/user.model.js";
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
 
-export const signup = async (req, res) => {
+export const register = async (req, res) => {
     try {
         const {name, email, password} = req.body;
 
@@ -16,7 +17,7 @@ export const signup = async (req, res) => {
 
         const newUser = await User.create({name, email, password: hash});
         await newUser.save();
-        return res.status(201).json({newUser});
+        return res.status(201).json({name: newUser.name, email: newUser.email});
     } catch (error) {
         console.log(error.message);
         return res.status(500).json({message: 'Internal Server error'});
@@ -35,7 +36,9 @@ export const login = async (req, res) => {
         const isPwdCorrect = await bcrypt.compare(password, existedUser.password);
         if(!isPwdCorrect) return res.status(400).json({message: 'Invalid credentials'});
 
-        return res.status(200).json({existedUser});
+        const token = jwt.sign({userId: existedUser._id}, process.env.JWT_SECRET_KEY, {expiresIn: '1d'});
+
+        return res.status(200).json({token});
     } catch (error) {
         console.log(error.message);
         return res.status(500).json({message: 'Internal Server error'});
