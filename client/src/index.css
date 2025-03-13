@@ -1,19 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Yellowtail&display=swap");
+
 @import "tailwindcss";
+@import "preline/variants.css";
 
 @plugin "tailwindcss-animate";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #F2F2F2;
-  --foreground: #0D0D0D;
+  --background: #f2f2f2;
+  --foreground: #0d0d0d;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.141 0.005 285.823);
-  --primary: #FFB30D;
+  --primary: #ffb30d;
   --primary-foreground: #001542;
-  --secondary: #7A7A7A;
+  --secondary: #7a7a7a;
   --special: #085454;
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.967 0.001 286.375);
@@ -121,41 +124,110 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: "Josefin Sans", sans-serif; /* Default font */
   }
 }
 
-.quattrocento-regular {
-  font-family: "Quattrocento", serif;
+.yellowtail {
+  font-family: "Yellowtail", cursive;
   font-weight: 400;
   font-style: normal;
 }
 
-.quattrocento-bold {
-  font-family: "Quattrocento", serif;
-  font-weight: 700;
+.roboto-mono-extra-light {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100;
   font-style: normal;
 }
 
-.quattrocento-sans-regular {
-  font-family: "Quattrocento Sans", sans-serif;
+.roboto-mono-very-light {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.roboto-mono-light {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-mono-regular {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-.quattrocento-sans-bold {
-  font-family: "Quattrocento Sans", sans-serif;
+.roboto-mono-bold {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-mono-very-bold {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.roboto-mono-extra-bold {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
 }
 
-.quattrocento-sans-regular-italic {
-  font-family: "Quattrocento Sans", sans-serif;
-  font-weight: 400;
-  font-style: italic;
+.josefin-sans-extra-light {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
 }
 
-.quattrocento-sans-bold-italic {
-  font-family: "Quattrocento Sans", sans-serif;
+.josefin-sans-very-light {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.josefin-sans-light {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.josefin-sans-regular {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.josefin-sans-bold {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.josefin-sans-very-bold {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.josefin-sans-extra-bold {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
   font-weight: 700;
-  font-style: italic;
+  font-style: normal;
 }
