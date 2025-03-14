@@ -1,16 +1,19 @@
-import React from 'react'
-import LandingPage from './pages/LandingPage'
-import { SignupPage } from './pages/SignupPage'
-import { LoginPage } from './pages/LoginPage'
+import React from "react";
+import LandingPage from "./pages/LandingPage";
+import { SignupPage } from "./pages/SignupPage";
+import { LoginPage } from "./pages/LoginPage";
+import HomePage from "./pages/HomePage";
+import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
   return (
-    <div>
+    <BrowserRouter>
       {/* <LandingPage /> */}
-      <SignupPage />
-      <LoginPage />
-    </div>
-  )
-}
+      {/* <SignupPage /> */}
+      {/* <LoginPage /> */}
+      <HomePage />
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
