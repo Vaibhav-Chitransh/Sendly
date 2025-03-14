@@ -31,7 +31,7 @@ export function SignupPage() {
             Welcome to Sendly
           </h2>
           <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300 text-center">
-          Let AI handle your emails while you focus on what matters
+            Let AI handle your emails while you focus on what matters
           </p>
           <form className="my-8" onSubmit={handleSubmit}>
             <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
@@ -74,7 +74,7 @@ export function SignupPage() {
               >
                 <IconBrandGoogle className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
                 <span className="text-neutral-700 dark:text-neutral-300 text-sm">
-                  Google
+                  Continue with Google
                 </span>
                 <BottomGradient />
               </button>
