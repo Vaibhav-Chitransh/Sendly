@@ -7,29 +7,32 @@ import { FlipWords } from "../ui/flip-words";
 export function Features() {
   const words = ["fast", "better", "effortlessly", "instantly"];
   return (
-    <div className="my-4 mx-4 h-full flex">
-
-      <div className="w-3/4 bg-white shadow-lg rounded-md">
+    <div className="my-4 mx-4 h-full flex flex-col md:flex-row">
+      <div className="w-full md:w-3/4 bg-white shadow-lg rounded-md">
         <div className="flex flex-col justify-center w-full my-8 px-8">
+          <div className="text-4xl josefin-sans-extra-bold mb-5">
+            <span style={{ color: "#0d0d0d" }}>Write Smart, Send </span>
+            <FlipWords words={words} /> <br />
+            <span style={{ color: "#0d0d0d" }}>emails with Sendly</span>
+          </div>
 
-            <div className="text-4xl josefin-sans-extra-bold mb-5">
-              <span style={{ color: "#0d0d0d" }}>Write Smart, Send </span>
-              <FlipWords words={words} /> <br />
-              <span style={{ color: "#0d0d0d" }}>emails with Sendly</span>
-            </div>
-
-            <h1 className="text-2xl josefin-sans-very-bold mb-2">Curious how Sendly transforms your email writing?</h1>
-            <h1 className="josefin-sans-bold mb-2">From a simple idea to a perfectly crafted email, Sendly does all the hard work for you! Our AI refines, personalizes, and optimizes your message—so you can send with confidence.</h1>
-            <h1>Hit the button below to see it in action!</h1>
+          <h1 className="text-2xl josefin-sans-very-bold mb-2">
+            Curious how Sendly transforms your email writing?
+          </h1>
+          <h1 className="josefin-sans-bold mb-2">
+            From a simple idea to a perfectly crafted email, Sendly does all the
+            hard work for you! Our AI refines, personalizes, and optimizes your
+            message—so you can send with confidence.
+          </h1>
+          <h1>Hit the button below to see it in action!</h1>
 
           <WorkingBtn />
         </div>
       </div>
 
-      <div className="mt-16 flex flex-col items-center justify-center w-1/4 mx-20">
+      <div className="mt-8 md:mt-16 flex flex-col items-center justify-center w-full md:w-1/4 mx-0 md:mx-20">
         <CardStack items={CARDS} />
       </div>
-
     </div>
   );
 }

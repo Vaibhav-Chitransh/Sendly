@@ -3,9 +3,11 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const ContactUs = () => {
   return (
-    <div className="mx-4 bg-white shadow-lg rounded-md my-4">
+    <div
+      id="contact-section"
+      className="mx-4 bg-white shadow-lg rounded-md my-4"
+    >
       <section className="max-w-6xl mx-auto px-6 py-16 md:flex md:justify-between">
-        {/* Left Side - Contact Details */}
         <div className="md:w-1/2">
           <h2 className="text-4xl font-bold text-gray-900">Contact Us</h2>
           <p className="text-gray-600 mt-4">
@@ -31,7 +33,6 @@ const ContactUs = () => {
           </div>
         </div>
 
-        {/* Right Side - Form */}
         <div className="md:w-1/2 mt-10 md:mt-0">
           <form className="bg-white shadow-md rounded-lg p-6 space-y-4">
             <div className="flex space-x-4">
