@@ -1,10 +1,11 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
-const ContactUs = () => {
+const ContactUs = React.forwardRef((props, ref) => {
   return (
     <div
       id="contact-section"
+      ref={ref}
       className="mx-4 bg-white shadow-lg rounded-md my-4"
     >
       <section className="max-w-6xl mx-auto px-6 py-16 md:flex md:justify-between">
@@ -73,6 +74,6 @@ const ContactUs = () => {
       </section>
     </div>
   );
-};
+});
 
 export default ContactUs;

@@ -2,15 +2,21 @@ import ContactUs from '@/components/layout/ContactSection'
 import {Features} from '@/components/layout/Features'
 import HeroSection from '@/components/layout/HeroSection'
 import Navbar from '@/components/layout/Navbar'
-import React from 'react'
+import React, { useRef } from 'react'
 
 const LandingPage = () => {
+  const targetContact = useRef(null);
+
+  const scrollToContact = () => {
+    targetContact.current.scrollIntoView({behavior: 'smooth'});
+  }
+
   return (
     <div>
-      <Navbar />
+      <Navbar scrollToContact={scrollToContact} />
       <HeroSection />
       <Features />
-      <ContactUs />
+      <ContactUs ref={targetContact} />
     </div>
   )
 }

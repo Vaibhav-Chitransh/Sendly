@@ -2,7 +2,7 @@ import React from "react";
 import logo from '../../assets/email_sendly_image_logo.gif';
 import { Button } from "../ui/button";
 
-const Navbar = () => {
+const Navbar = ({scrollToContact}) => {
   return (
     <div className="josefin-sans-extra-bold shadow-md bg-white">
       <header class="relative flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-white text-sm py-2 dark:bg-neutral-800">
@@ -68,8 +68,7 @@ const Navbar = () => {
             aria-labelledby="hs-navbar-example-collapse"
           >
             <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:ps-5">
-              <Button className='josefin-sans-very-bold cursor-pointer'>Signup</Button>
-              <Button className='josefin-sans-very-bold cursor-pointer bg-radial from-teal-500 to-teal-200'>Contact Us</Button>
+              <Button className='josefin-sans-very-bold cursor-pointer bg-radial from-teal-500 to-teal-200' onClick={scrollToContact}>Contact Us</Button>
             </div>
           </div>
         </nav>

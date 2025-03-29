@@ -3,6 +3,7 @@ import heroImage from "../../assets/hero_section_image.gif";
 import { Button } from "../ui/button";
 import { Cover } from "../ui/Cover";
 import { TextGenerateHeroSection } from "./TextGenerateHeroSection";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -17,7 +18,9 @@ const HeroSection = () => {
           <TextGenerateHeroSection />
         </div>
         <div className="mt-8">
-          <Button className="cursor-pointer font-bold">Get Started</Button>
+          <Link to='/dashboard'>
+            <Button className="cursor-pointer font-bold">Get Started</Button>
+          </Link>
         </div>
       </div>
       <div className="hidden md:flex w-full items-center justify-center">
