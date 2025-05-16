@@ -12,6 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; // Changed from motion/react
 import LogoImage from "../../assets/email_sendly_image_logo.gif";
+import { ClerkProvider, UserButton } from "@clerk/clerk-react";
 
 // Utility function (since it's missing from your code)
 const cn = (...classes) => {
@@ -48,20 +49,12 @@ export function LayoutSidebar() {
         <IconNotes className="text-neutral-700 dark:text-neutral-200 h-5 w-5 shrink-0" />
       ),
     },
-    {
-      label: "Logout",
-      href: "#",
-      icon: (
-        <IconArrowLeft className="text-neutral-700 dark:text-neutral-200 h-5 w-5 shrink-0" />
-      ),
-    },
   ];
   const [open, setOpen] = useState(false);
   return (
     <div
       className={cn(
         "rounded-md flex flex-col md:flex-row bg-gray-100 dark:bg-neutral-800 w-full flex-1 border border-neutral-200 dark:border-neutral-700 overflow-hidden",
-        // Removed `max-w-7xl mx-auto` to eliminate margins and ensure full width
         "h-screen w-screen"
       )}
     >
@@ -78,16 +71,9 @@ export function LayoutSidebar() {
           <div>
             <SidebarLink
               link={{
-                label: "Manu Arora",
-                href: "#",
+                label: "Vaibhav Chitransh",
                 icon: (
-                  <img
-                    src="https://assets.aceternity.com/manu.png"
-                    className="h-7 w-7 shrink-0 rounded-full"
-                    width={50}
-                    height={50}
-                    alt="Avatar"
-                  />
+                    <UserButton />
                 ),
               }}
             />
