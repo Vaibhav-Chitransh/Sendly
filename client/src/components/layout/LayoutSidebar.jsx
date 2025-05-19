@@ -12,7 +12,9 @@ import {
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; // Changed from motion/react
 import LogoImage from "../../assets/email_sendly_image_logo.gif";
-import { ClerkProvider, UserButton } from "@clerk/clerk-react";
+import { UserButton } from "@clerk/clerk-react";
+import Compose from "./Compose";
+import History from "./History";
 
 // Utility function (since it's missing from your code)
 const cn = (...classes) => {
@@ -80,7 +82,7 @@ export function LayoutSidebar() {
           </div>
         </SidebarBody>
       </Sidebar>
-      <Dashboard />
+      <History />
     </div>
   );
 }
@@ -92,7 +94,7 @@ export const Logo = () => {
     >
       <img src={LogoImage} className="w-10 mix-blend-multiply" />
       <motion.span
-        initial={{ opacity: 0 }}
+        initial={{ opacity: 0 }}  
         animate={{ opacity: 1 }}
         className="font-medium text-black dark:text-white whitespace-pre"
       >
@@ -109,32 +111,5 @@ export const LogoIcon = () => {
     >
       <img src={LogoImage} className="w-10 mix-blend-multiply" />
     </Link>
-  );
-};
-
-// Dummy dashboard component with content
-const Dashboard = () => {
-  return (
-    <div className="flex flex-1">
-      <div className="p-2 md:p-10 rounded-tl-2xl border border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-900 flex flex-col gap-2 flex-1 w-full h-full">
-        {/* Added `min-h-0` to ensure proper flexbox behavior */}
-        <div className="flex gap-2 min-h-0">
-          {[...new Array(4)].map((_, i) => (
-            <div
-              key={"first-array" + i}
-              className="h-20 w-full rounded-lg bg-gray-100 dark:bg-neutral-800 animate-pulse"
-            ></div>
-          ))}
-        </div>
-        <div className="flex gap-2 flex-1 min-h-0">
-          {[...new Array(2)].map((_, i) => (
-            <div
-              key={"second-array" + i}
-              className="h-full w-full rounded-lg bg-gray-100 dark:bg-neutral-800 animate-pulse"
-            ></div>
-          ))}
-        </div>
-      </div>
-    </div>
   );
 };

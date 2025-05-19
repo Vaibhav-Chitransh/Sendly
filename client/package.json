@@ -12,6 +12,7 @@
   "dependencies": {
     "@clerk/clerk-react": "^5.31.2",
     "@radix-ui/react-label": "^2.1.2",
+    "@radix-ui/react-select": "^2.2.4",
     "@radix-ui/react-slot": "^1.1.2",
     "@tabler/icons-react": "^3.31.0",
     "@tailwindcss/vite": "^4.0.13",

@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { LoginPage } from "./pages/LoginPage";
 import { SignupPage } from "./pages/SignupPage";
 import { LayoutSidebar } from "./components/layout/LayoutSidebar";
-import { SignedIn, SignedOut } from "@clerk/clerk-react";
 
 // Dummy authentication function (replace with real auth logic)
 const isAuthenticated = () => {
